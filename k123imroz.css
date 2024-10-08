@@ -6,8 +6,7 @@
 }
 
 .header {
-    background-color: #282828;
-    position: fixed;
+    position: absolute;
     z-index: 999;
     width: 100%;
 }
@@ -18,11 +17,11 @@
 }
 
 .box {
+    position: relative;
     width: 95%;
     display: flex;
     justify-content: space-between;
     margin: auto;
-    /* mix-blend-mode: difference;  */
 }
 
 .box ul {
@@ -157,7 +156,8 @@
     background-color: gray;
 }
 
-.header .bb .b {
+.b::before {
+    content: "BUY NOW";
     padding: 18px 45px;
     border-radius: 35px;
     border: 1px solid gray;
@@ -166,9 +166,9 @@
 
 }
 
-.header .bb .b:hover {
+.b:hover::before {
     background-color: #FD4766;
-    border: none;
+    border: 1px solid #FD4766 ;
 }
 
 .m {
